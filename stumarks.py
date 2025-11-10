@@ -1,7 +1,5 @@
 import sys
 
-# Check if correct number of arguments are provided
-# Expecting: script_name + 5 marks = 6 arguments total
 if len(sys.argv) == 6:
     script_name = sys.argv[0]
     marks = [float(m) for m in sys.argv[1:6]]
@@ -12,10 +10,9 @@ else:
     marks = [80, 75, 90, 85, 70]
     print("No input given - using default marks:")
 
-# Calculate average
 average = sum(marks) / 5
 
-# Determine grade
+
 if average >= 90:
     grade = 'A'
 elif average >= 75:
